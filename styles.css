@@ -1,0 +1,239 @@
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #000000;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+.logo img {
+    width: 60%;
+    margin-bottom: 20px;
+}
+
+nav ul, .extra-options ul, .user-playlists ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li, .extra-options ul li, .user-playlists ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+nav ul li img, .extra-options ul li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.install-app button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1DB954;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.main-content {
+    width: 80%;
+    background-color: #121212;
+    color: #FFFFFF;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.greeting {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user img {
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.playlists {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.playlist-item {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    width:350px;
+    box-sizing: border-box;
+}
+
+.playlist-item img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    border-radius: 4px;
+}
+
+.playlist-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.shows {
+    margin: 20px 0;
+}
+
+.shows h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.show-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.show-item {
+    width:240px;
+    text-align: center;
+}
+
+.show-item img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.show-item p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1f1f1f;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+footer .now-playing, .player-controls, .device {
+    display: flex;
+    align-items: center;
+}
+
+footer .now-playing img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+footer .track-info span {
+    display: block;
+}
+
+.player-controls img {
+    width: 500px;
+    height: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+    .main-content {
+        width: 100%;
+        padding: 10px;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .greeting {
+        font-size: 20px;
+    }
+    .user img {
+        width: 30px;
+        margin-right: 5px;
+    }
+    .playlists, .show-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .playlist-item {
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+    .playlist-item img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .playlist-title {
+        font-size: 16px;
+    }
+    .shows h2 {
+        font-size: 18px;
+    }
+    .show-item {
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    footer .now-playing img {
+        width: 30px;
+        margin-right: 5px;
+    }
+    footer .player-controls img {
+        width: 20px;
+        margin: 0 5px;
+    }
+}
